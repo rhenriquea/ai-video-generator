@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/rhenriquea/ai-video-generator/issues"
   },
-  "homepage": "https://github.com/rhenriquea/ai-video-generator#readme"
+  "homepage": "https://github.com/rhenriquea/ai-video-generator#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
