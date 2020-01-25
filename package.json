@@ -1,0 +1,23 @@
+{
+  "name": "ai-video-generator",
+  "version": "1.0.0",
+  "description": "Open source project to integrate AI and create automated videos for YouTube",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhenriquea/ai-video-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhenriquea/ai-video-generator/issues"
+  },
+  "homepage": "https://github.com/rhenriquea/ai-video-generator#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
