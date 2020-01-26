@@ -6,18 +6,24 @@ const sentenceBoundaryDetector = require('sbd');
 const NaturalLanguageUnderstandingV1 = require('ibm-watson/natural-language-understanding/v1');
 const { IamAuthenticator } = require('ibm-watson/auth');
 
+const state =  require('./state');
+
 const nlu = new NaturalLanguageUnderstandingV1({
   authenticator: new IamAuthenticator({ apikey: watsonApiKey }),
   version: '2018-04-05',
   url: watsonURL
 });
 
-async function robot(videoContent) {
+async function robot() {
+  const videoContent = state.loadVideoContent();
+
   await fetchContentFromWikipedia(videoContent);
   sanitizeContent(videoContent);
   breakContentIntoSentences(videoContent);
   limitMaximumSentences(videoContent);
   await fetchKeywordsFromAllSentences(videoContent);
+
+  state.saveVideoContent(videoContent);
 }
 
 async function fetchContentFromWikipedia(videoContent) {
