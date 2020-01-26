@@ -4,13 +4,15 @@ const robots = {
 }
 
 async function start() {
-  const videoContent = {};
+  const videoContent = {
+    maximumSentences: 7
+  };
 
   videoContent.subject = askAndReturnSubject();
   videoContent.prefix = askAndReturnPrefix();
   await robots.text(videoContent);
 
-  console.log(videoContent)
+  console.dir(videoContent, {depth: 1})
 }
 
 function askAndReturnSubject() {
