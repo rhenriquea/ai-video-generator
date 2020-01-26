@@ -1,12 +1,16 @@
 const readline = require('readline-sync');
+const robots = {
+  text: require('./robots/text')
+}
 
-function start() {
+async function start() {
   const videoContent = {};
 
   videoContent.subject = askAndReturnSubject();
   videoContent.prefix = askAndReturnPrefix();
-  console.log(videoContent)
+  await robots.text(videoContent);
 
+  console.log(videoContent)
 }
 
 function askAndReturnSubject() {

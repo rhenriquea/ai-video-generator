@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/rhenriquea/ai-video-generator#readme",
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "algorithmia": "^0.3.10",
+    "readline-sync": "^1.4.10",
+    "sbd": "^1.0.16"
   }
 }
